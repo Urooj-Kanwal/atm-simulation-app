@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATM SIMULATION APP</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="atm-box">
+  <h2>UKK ATM</h2>
+  <p id="welcomeMsg">Welcome! Ready for Service</p>
+
+  <div id="pinBox">
+    <button id="enterPinBtn" onclick="showPin()">Enter Your PIN</button>
+    <div id="pinInputBox">
+      <input type="password" id="pinInput" placeholder="Your PIN" onkeydown="pinEnter(event)">
+      <label id="pinResult"></label>
+    </div>
+  </div>
+
+  <div id="mainBox">
+    <label id="result">Select Your Option</label>
+
+    <button onclick="checkBalance()">Check Balance</button>
+    <button onclick="showAmount('deposit')">Deposit</button>
+    <button onclick="showAmount('withdraw')">Withdraw</button>
+    <button id="exitBtn" onclick="exitATM()">Exit</button>
+
+    <div id="amountBox">
+      <label id="amountLabel">Enter Your Amount:</label>
+      <input type="text" id="amountInput" placeholder="Your Amount" onkeydown="amountEnter(event)">
+      <button onclick="confirmAmount()">Confirm</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
